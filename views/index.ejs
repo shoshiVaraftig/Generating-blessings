@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>smartAI generator</title>
+</head>
+<body>
+    <h1>The generator of world blessings</h1>
+    <form action="/prompt" method="post">
+        <label for="a-input">STYLE:</label>
+        <input type="text" name="b-input">
+
+      <label for="b-input">AGE:</label>
+        <input type="text" name="b-input" placeholder="enter age">
+        <label for="c-input">EVENT:</label>
+        <input type="text" name="c-input" placeholder="enter event">
+<label for="d-input">LENGTH:</label>
+<input type="text" name="d-input">
+
+        <button type="submit">generate prompts</button>
+    </form>
+    <div id="output">
+        <% if (typeof response !== 'undefined') { %>
+            <h1>output</h1>
+            <div class="prompt-container">
+                <h2>prompt 1</h2>
+                <br>
+                <pre class="prompt-text"><%= response["1"] %></pre>
+            </div>
+           
+            
+        <% } else if (typeof error !== 'undefined') { %>  
+            <p class="error-message">Error: <%= error %></p>
+        <% } %>   
+     </div>
+     <footer>
+        <h3>created by Shoshi</h3>
+     </footer>
+</body>
+</html>
